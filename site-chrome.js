@@ -1,6 +1,7 @@
 const siteNavItems = [
   { id: 'home', label: 'Home', href: '/#top' },
   { id: 'society', label: 'The Society', href: '/society/' },
+  { id: 'last-stand', label: 'The Last Stand', href: '/last-stand/' },
   { id: 'worldbuilding', label: 'Worldbuilding', href: '/worldbuilding/' },
   { id: 'process', label: 'Process', href: '/worldbuilding/process/' },
   { id: 'about', label: 'About', href: '/#about' }
@@ -18,8 +19,9 @@ function getCurrentSection() {
   const path = location.pathname.replace(/\/+$/, '') || '/';
   if (path === '/' || path === '/index.html' || path.endsWith('/index-old.html')) return 'home';
   if (path.startsWith('/society')) return 'society';
+  if (path.startsWith('/last-stand')) return 'last-stand';
   if (path.startsWith('/worldbuilding/process')) return 'process';
-  if (path.startsWith('/worldbuilding') || path.startsWith('/last-stand')) return 'worldbuilding';
+  if (path.startsWith('/worldbuilding')) return 'worldbuilding';
   return '';
 }
 
@@ -52,7 +54,7 @@ class SiteHeader extends HTMLElement {
         .menu-toggle{display:none}
         a:focus-visible,button:focus-visible{outline:2px solid white;outline-offset:4px}
         @media(max-width:950px){nav{gap:20px}}
-        @media(max-width:700px){header{height:68px}.menu-toggle{display:flex;width:42px;height:42px;background:none;border:1px solid #45484b;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:#f0f0ed}.menu-toggle span{width:19px;height:1px;background:#eee}nav{display:none;position:absolute;left:0;right:0;top:68px;padding:12px 23px 23px;background:#0d1013;border-bottom:1px solid #292c30;flex-direction:column;align-items:stretch;gap:0;z-index:10}nav.is-open{display:flex}.nav-link{padding:13px 0}.nav-link::after{bottom:9px;right:auto;width:45px}}
+        @media(max-width:900px){header{height:68px}.menu-toggle{display:flex;width:42px;height:42px;background:none;border:1px solid #45484b;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:#f0f0ed}.menu-toggle span{width:19px;height:1px;background:#eee}nav{display:none;position:absolute;left:0;right:0;top:68px;padding:12px 23px 23px;background:#0d1013;border-bottom:1px solid #292c30;flex-direction:column;align-items:stretch;gap:0;z-index:10}nav.is-open{display:flex}.nav-link{padding:13px 0}.nav-link::after{bottom:9px;right:auto;width:45px}}
         @media(max-width:390px){.brand{font-size:17px;gap:12px}.brand-mark{width:21px;height:21px}}
         @media(prefers-reduced-motion:reduce){.nav-link::after{transition:none}}
       </style>
@@ -86,7 +88,7 @@ class SiteHeader extends HTMLElement {
       const sectionNavIds = {
         top: 'home',
         'the-society': 'society',
-        'the-last-stand': 'worldbuilding',
+        'the-last-stand': 'last-stand',
         process: 'process',
         about: 'about'
       };
