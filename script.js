@@ -10,3 +10,4 @@ if (chapterList) {
     return `<li><a href="society/${String(n).padStart(2, '0')}/" aria-label="Read Chapter ${n}: ${title}"><span class="chapter-no">${String(n).padStart(2, '0')}</span><span>${title}</span><span aria-hidden="true">↗</span></a></li>`;
   }).join('');
 }
+

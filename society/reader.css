@@ -12,3 +12,4 @@ a:focus-visible,button:focus-visible{outline:2px solid white;outline-offset:4px}
 .reader-nav{gap:clamp(12px,2.6vw,35px);flex-wrap:wrap}
 .reader-footer{padding:25px clamp(20px,5vw,68px);font-size:11px;color:var(--sub);gap:20px}
 @media(max-width:680px){.reader-header{height:auto;min-height:73px;align-items:flex-start;flex-direction:column;gap:8px}.reader-nav{gap:12px}.reader-nav a{font-size:12px}.reader-footer{flex-direction:column}}
+.ipfs-archive{margin:18px 0 0;color:var(--sub);font:11px/1.7 'IBM Plex Mono','Courier New',monospace}.ipfs-archive a{color:var(--ink);text-underline-offset:4px}
