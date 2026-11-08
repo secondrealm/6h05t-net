@@ -24,8 +24,16 @@ document.querySelectorAll('.site-nav a').forEach((link) => {
 });
 const sections = ['top', 'the-society', 'the-last-stand', 'process', 'about'].map(id => document.getElementById(id)).filter(Boolean);
 const navLinks = [...document.querySelectorAll('.nav-link')];
+const navTargets = {
+  top: '#top',
+  'the-society': '/society/',
+  'the-last-stand': '/worldbuilding/',
+  process: '/worldbuilding/process/',
+  about: '#about'
+};
 function setActive(id) {
-  navLinks.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`));
+  const href = navTargets[id];
+  navLinks.forEach(link => link.classList.toggle('is-active', href && link.getAttribute('href') === href));
 }
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {

@@ -7,3 +7,8 @@
 a:focus-visible,button:focus-visible{outline:2px solid white;outline-offset:4px}
 @media(max-width:650px){.reader-header{height:64px}.reader-nav{gap:13px}.reader-nav a{font-size:11px}.reader-shell{padding:55px 20px 65px}.toc{grid-template-columns:1fr}.toc .name{font-size:22px}.chapter-nav{grid-template-columns:1fr}.reader-footer{flex-direction:column}.chapter-nav a:last-child{text-align:left}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.reader-header{height:auto;min-height:73px;padding:15px clamp(20px,5vw,68px);gap:22px;letter-spacing:normal}
+.logo{font-size:20px;letter-spacing:.09em;white-space:nowrap}
+.reader-nav{gap:clamp(12px,2.6vw,35px);flex-wrap:wrap}
+.reader-footer{padding:25px clamp(20px,5vw,68px);font-size:11px;color:var(--sub);gap:20px}
+@media(max-width:680px){.reader-header{height:auto;min-height:73px;align-items:flex-start;flex-direction:column;gap:8px}.reader-nav{gap:12px}.reader-nav a{font-size:12px}.reader-footer{flex-direction:column}}
