@@ -1,0 +1,18 @@
+.hero-face-background {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  background-image: url("assets/hero-face.png");
+  background-position: center 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: contrast(1.12) brightness(.85);
+}
+
+@media (max-width: 700px) {
+  .hero-face-background {
+    background-position: left 35%;
+    opacity: .48;
+  }
+}

@@ -11,22 +11,13 @@
   <title>6h05t.net — Experimental Fiction Archive</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script src="/site-chrome.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="noise-overlay" aria-hidden="true"></div>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="6h05t.net home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>6h05t.net</span></a>
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
-    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="#top" class="nav-link is-active">Home</a>
-      <a href="#the-society" class="nav-link">The Society</a>
-      <a href="#the-last-stand" class="nav-link">The Last Stand</a>
-      <a href="#process" class="nav-link">Process</a>
-      <a href="#about" class="nav-link">About</a>
-    </nav>
-  </header>
+  <site-header id="top" current="home"></site-header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="face-art" aria-hidden="true"></div>
@@ -61,6 +52,6 @@
 
     <section class="about-section wrap" id="about" aria-labelledby="about-title"><span class="section-number">PROJECT RECORD</span><h2 id="about-title">About 6h05t</h2><div class="about-grid"><p>6h05t is an experimental fiction and worldbuilding project by <a href="https://secondrealm.net" target="_blank" rel="noopener noreferrer">Second Realm ↗</a>. The published narrative was completed in 2023 and archived in 2025. The work explores the boundaries between human identity, digital systems, artistic expression, and resistance.</p><dl><div><dt>CREATOR</dt><dd>Second Realm / Eric Rhodes</dd></div><div><dt>FORM</dt><dd>Serialized fiction + creative archive</dd></div><div><dt>STATUS</dt><dd>Archived</dd></div><div><dt>ORIGINAL RELEASE</dt><dd>2023</dd></div></dl></div><p class="closing-line">“You don't see us. But we see you.” <span>— Jxsper</span></p></section>
   </main>
-  <footer class="site-footer wrap"><p><a href="https://secondrealm.net" target="_blank" rel="noopener noreferrer">6h05t.net — Created by Second Realm</a></p><div><a href="https://x.com/x5society" target="_blank" rel="noopener noreferrer">@x5society ↗</a><a href="https://x.com/6h05t_" target="_blank" rel="noopener noreferrer">@6h05t_ ↗</a><a href="#top">Back to top ↑</a></div></footer>
+  <site-footer></site-footer>
 </body>
 </html>
