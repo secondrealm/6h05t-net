@@ -145,6 +145,18 @@ customElements.define('site-header', SiteHeader);
 customElements.define('site-footer', SiteFooter);
 
 function replaceLegacyChrome() {
+  document.querySelectorAll('a[href]').forEach(link => {
+    const destination = new URL(link.getAttribute('href'), location.href);
+    if (destination.origin !== location.origin) return;
+    const walker = document.createTreeWalker(link, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const textNode = walker.currentNode;
+      if (textNode.textContent.includes('↗')) {
+        textNode.textContent = textNode.textContent.replaceAll('↗', '→');
+      }
+    }
+  });
+
   const legacyHeader = document.querySelector('header.site-header, header.reader-header, header.header');
   if (legacyHeader) {
     const sharedHeader = document.createElement('site-header');
