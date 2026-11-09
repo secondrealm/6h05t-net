@@ -129,7 +129,7 @@ class SiteFooter extends HTMLElement {
         @media(max-width:950px){footer{align-items:flex-start;flex-direction:column;padding-top:23px;padding-bottom:23px}}
       </style>
       <footer>
-        <p>6h05t.net — Edited by <a href="https://secondrealm.net" target="_blank" rel="noopener noreferrer">Second Realm / Eric Rhodes</a></p>
+        <p>6h05t.net — Edited by <a href="https://secondrealm.net" target="_blank" rel="noopener noreferrer">Second Realm / Eric Rhodes</a> <span aria-hidden="true">|</span> <a href="https://unofficialpunks.com" target="_blank" rel="noopener noreferrer">Unofficial Punks</a></p>
         <div><a href="https://x.com/secondrealm" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">𝕏</span> @secondrealm</a><a href="#top" data-back-to-top>Back to top ↑</a></div>
       </footer>`;
     this.shadowRoot.querySelector('[data-back-to-top]').addEventListener('click', event => {
